@@ -55,7 +55,7 @@ Capa de Infraestructura
 (Normalmente su interfaz se declara en aplicación o dominio y su implementación en infraestructura)
 
 `UserRegister`:
-
+```
 class UserRegister {
 
 constructor(
@@ -65,9 +65,46 @@ readonly repository: UserRepository,
 register(username: string, email: string, password: string) {
 const user = new User(username, email, password);
 this.repository.save(user);
-}
+}}
+```
+`User`:
+```
+<![endif]-->
+
+class User {
+
+constructor(
+
+public username: string,
+
+public email: string,
+
+public password: string,
+
+) {
+
+if (!this.isValid(username, email, password)) {
+
+throw new Error("Invalid user");
+
 }
 
+}
+
+private isValid(username: string, email: string, password: string): boolean {
+
+return username.length > 3
+
+&& email.includes("@")
+
+&& password.length > 8;
+
+}}
+```
+`UserRepository`:
+```
+
+```
 #### Herencia
 _xxx_
 
@@ -83,6 +120,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODM5MTg1NDcsLTE4MTM4NjAxNDEsLT
-E3ODE0ODk5NSwtODU3NzA4OTA5XX0=
+eyJoaXN0b3J5IjpbMTQzNzIyMDY0MSwtMTgxMzg2MDE0MSwtMT
+c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
