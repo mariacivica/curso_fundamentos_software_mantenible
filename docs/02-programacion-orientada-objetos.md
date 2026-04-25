@@ -18,16 +18,15 @@ En capas como la del controlador, interesa aplicar abstracción para que no apar
 En lugar de tener en el controlador todo el proceso paso a paso, extraemos esos detalles a funciones o métodos que encapsulan esa lógica. Así queda más limpio, legible y centrado en su responsabilidad.
 
 Código sin abstracción:
-```const username = "javiercane";
-
+```
+const username = "javiercane";
 const email = "javi@example.com";
-
 const password = "J4vl3r";
 
 if (username.length < 3 || password.length < 8) {
-
 console.error("Invalid username or password");
 }
+
 sql`
 INSERT INTO users (username, email, password)
 VALUES (${username}, ${email}, ${password})
@@ -39,8 +38,17 @@ const username = "javiercane";
 const email = "javi@example.com";
 const password = "J4vl3r";
 registerUser(username, email, password);
+```
 #### Encapsulación
-_xxx_
+Consiste en mover la lógica y las reglas al objeto o clase que mejor representa esa responsabilidad, para que desde fuera no haya que conocer los detalles internos ni repetir validaciones.
+
+Encapsulamos cada responsabilidad en su sitio de forma que las funciones del ejemplo anterior _registerUser()_ desaparecen:
+
+- _UserRegister_: coordina el caso de uso de registro de usuario  Capa de Aplicación
+(No debe contener detalles técnicos de infraestructura ni mucha lógica de dominio; solo debe orquestar)
+- _User_: encapsula aún más la validación  Capa de Dominio
+
+(Representa la entidad de negocio y encapsula las reglas propias: validar que el usuario sea correcto)
 
 #### Herencia
 _xxx_
@@ -57,6 +65,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU2NDY4NTY1LC0xODEzODYwMTQxLC0xNz
-gxNDg5OTUsLTg1NzcwODkwOV19
+eyJoaXN0b3J5IjpbMjEzNjE3NzYzMCwtMTgxMzg2MDE0MSwtMT
+c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
