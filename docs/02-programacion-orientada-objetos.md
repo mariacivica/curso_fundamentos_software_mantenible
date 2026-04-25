@@ -18,7 +18,25 @@ En capas como la del controlador, interesa aplicar abstracción para que no apar
 En lugar de tener en el controlador todo el proceso paso a paso, extraemos esos detalles a funciones o métodos que encapsulan esa lógica. Así queda más limpio, legible y centrado en su responsabilidad.
 
 Código sin abstracción:
+```const username = "javiercane";
 
+const email = "javi@example.com";
+
+const password = "J4vl3r";
+
+if (username.length < 3 || password.length < 8) {
+
+console.error("Invalid username or password");
+
+}
+
+sql`
+
+INSERT INTO users (username, email, password)
+
+VALUES (${username}, ${email}, ${password})
+
+`;
 #### Encapsulación
 _xxx_
 
@@ -37,6 +55,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NzUxNjAwMCwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbLTM3NjAyMjQ2NiwtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
