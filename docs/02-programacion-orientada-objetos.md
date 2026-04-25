@@ -177,7 +177,16 @@ Relación con SOLID:
 Esto se apoya en inversión de dependencias: la clase de aplicación depende de una abstracción (`UserRepository`) y no de una implementación concreta.
 
 ## Qué es un objeto
-_xxx_
+En Programación Orientada a Objetos, un objeto es algo que tiene por un lado datos y por otro lado comportamiento.
+
+La clase no es el objeto en sí; el objeto es el resultado de aplicar el constructor de una clase.  
+Es decir, cuando hacemos _new User(...)_, lo que obtenemos es una instancia, es decir, un objeto.
+
+En este paradigma se busca que los datos y la lógica que trabaja sobre esos datos estén juntos.  
+
+Por eso se entiende que un objeto debe agrupar:
+ - estado: sus datos o propiedades
+ - comportamiento: los métodos que operan sobre ese estado
 
 ### Acoplamiento
 _xxx_
@@ -185,6 +194,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MDE5MzMwMSwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbLTE2MjgyMDYwMSwtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
