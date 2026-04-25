@@ -1,2 +1,5 @@
 # curso_fundamentos_software_mantenible
-Curso de Programación Orientada a Objetos (object-oriented programming)
+- 01 Clean Code
+- 02 Programación Orientada a Objetos
+- 03 Reglas del diseño simple
+- 04 Principios SOLID 
