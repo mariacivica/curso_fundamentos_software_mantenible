@@ -42,8 +42,9 @@ registerUser(username, email, password);
 #### Encapsulación
 Consiste en mover la lógica y las reglas al objeto o clase que mejor representa esa responsabilidad, para que desde fuera no haya que conocer los detalles internos ni repetir validaciones.
 
-Encapsulamos cada responsabilidad en su sitio de forma que las funciones del ejemplo anterior _registerUser()_ desaparecen:
+Encapsulamos cada responsabilidad en su sitio de forma que las funciones del ejemplo anterior _registerUser()_ desaparecen.
 
+Ejemplo:
 - `UserRegister`: coordina el caso de uso de registro de usuario  
 Capa de Aplicación
 (No debe contener detalles técnicos de infraestructura ni mucha lógica de dominio; solo debe orquestar)
@@ -116,6 +117,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMzg0MDEyNSwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbMTEwMTgxOTA0MywtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
