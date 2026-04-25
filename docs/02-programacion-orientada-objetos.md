@@ -213,12 +213,16 @@ En cambio, una clase como `User` sí permite agrupar:
  - formato
  - y demás lógica relacionada
 
+Por eso, en POO se suele preferir el uso de clases frente a objetos planos, ya que facilitan una mayor cohesión.
+Un objeto no es solo una estructura de datos: es la unión de datos + comportamiento.  
+Por eso, en POO interesa que la lógica viva lo más cerca posible del estado sobre el que opera.
+
 ### Acoplamiento
 _xxx_
 
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjk2NjAwMzYsLTE4MTM4NjAxNDEsLT
-E3ODE0ODk5NSwtODU3NzA4OTA5XX0=
+eyJoaXN0b3J5IjpbLTQzODczNzY0LC0xODEzODYwMTQxLC0xNz
+gxNDg5OTUsLTg1NzcwODkwOV19
 -->
