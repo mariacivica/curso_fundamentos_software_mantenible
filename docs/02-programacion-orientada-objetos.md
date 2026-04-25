@@ -109,7 +109,16 @@ Ejemplo:
 
 `CodelyError`:
 ```
+export abstract class CodelyError extends Error {
 
+constructor(
+readonly params: Record<string, unknown> = {},
+) {
+super();
+}
+
+abstract message(): string;
+}
 ```
 `UserNotExistsError`:
 ```
@@ -125,7 +134,14 @@ return `The user ${this.id} does not exist`;
 ```	
 
 #### Polimorfismo
-_xxx_
+Consiste en poder tratar distintos objetos a través de un mismo tipo común, confiando en que todos comparten una misma interfaz o contrato.
+
+Eso permite que el código cliente no necesite conocer la implementación concreta con la que está trabajando, sino solo el comportamiento que ese contrato garantiza.
+
+Ejemplo (polimorfismo con errores):
+Si capturamos un `CodelyError`, podemos llamar a _message()_ sin importar cuál sea el error concreto, porque todas sus clases hijas implementan ese método.
+
+
 
 ## Qué es un objeto
 _xxx_
@@ -136,6 +152,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDY2NDY2MzgsLTE4MTM4NjAxNDEsLT
-E3ODE0ODk5NSwtODU3NzA4OTA5XX0=
+eyJoaXN0b3J5IjpbMjMwODg5NjEwLC0xODEzODYwMTQxLC0xNz
+gxNDg5OTUsLTg1NzcwODkwOV19
 -->
