@@ -27,16 +27,18 @@ const password = "J4vl3r";
 if (username.length < 3 || password.length < 8) {
 
 console.error("Invalid username or password");
-
 }
-
 sql`
-
 INSERT INTO users (username, email, password)
-
 VALUES (${username}, ${email}, ${password})
-
 `;
+```
+Código con abstracción:
+```
+const username = "javiercane";
+const email = "javi@example.com";
+const password = "J4vl3r";
+registerUser(username, email, password);
 #### Encapsulación
 _xxx_
 
@@ -55,6 +57,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NjAyMjQ2NiwtMTgxMzg2MDE0MSwtMT
-c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
+eyJoaXN0b3J5IjpbMjU2NDY4NTY1LC0xODEzODYwMTQxLC0xNz
+gxNDg5OTUsLTg1NzcwODkwOV19
 -->
