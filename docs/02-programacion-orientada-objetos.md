@@ -140,7 +140,15 @@ Eso permite que el código cliente no necesite conocer la implementación concre
 
 Ejemplo (polimorfismo con errores):
 Si capturamos un `CodelyError`, podemos llamar a _message()_ sin importar cuál sea el error concreto, porque todas sus clases hijas implementan ese método.
-
+```
+try {
+const finder = new UserFinder();
+return finder.find(userId);
+} 
+catch (error: CodelyError) {
+console.log(error.message());
+}
+```
 
 
 ## Qué es un objeto
@@ -152,6 +160,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMwODg5NjEwLC0xODEzODYwMTQxLC0xNz
-gxNDg5OTUsLTg1NzcwODkwOV19
+eyJoaXN0b3J5IjpbMTkxMDg3NTE3NCwtMTgxMzg2MDE0MSwtMT
+c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
