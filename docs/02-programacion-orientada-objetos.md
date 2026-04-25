@@ -241,14 +241,28 @@ return username.length > 3 || pass.length > 8;
 ```
 `newUser`:
 ```
+function newUser(username, email, pass) {
 
+if (!(username.length > 3 || pass.length > 8)) {
+throw new Error("Invalid user");
+}
+return {
+username: username,
+email: email,
+pass: pass,
+usernameFormatted() {
+return this.username.toUpperCase();
+}};
+}
 ```
+Ambos ejemplos devuelven objetos, pero en el primero el objeto es una instancia de la clase `User`, mientras que en el segundo es un objeto plano devuelto por una función. En POO se suele preferir el modelo de clase porque facilita agrupar datos y comportamiento y favorece una mayor cohesión.
+
 ### Acoplamiento
 _xxx_
 
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4MjQ4NjA1NywtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbMTM1MzY5MDYzMywtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
