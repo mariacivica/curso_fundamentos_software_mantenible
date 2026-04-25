@@ -106,7 +106,23 @@ Consiste en crear clases específicas a partir de una clase más general, reutil
 Ejemplo:
 - `CodelyError`: define una estructura común para los errores y obliga a que cada error concreto implemente _message()._
 - `UserNotExistsError`: concreta el error para el caso en que un usuario no existe.
-- 
+
+`CodelyError`:
+```
+
+```
+`UserNotExistsError`:
+```
+export class UserNotExistError extends CodelyError {
+
+constructor(readonly id: string) {
+super({ id });
+}
+
+message(): string {
+return `The user ${this.id} does not exist`;
+}}
+```	
 
 #### Polimorfismo
 _xxx_
@@ -120,6 +136,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMTU5MDM2LC0xODEzODYwMTQxLC0xNz
-gxNDg5OTUsLTg1NzcwODkwOV19
+eyJoaXN0b3J5IjpbLTIxMDY2NDY2MzgsLTE4MTM4NjAxNDEsLT
+E3ODE0ODk5NSwtODU3NzA4OTA5XX0=
 -->
