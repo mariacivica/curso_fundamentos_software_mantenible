@@ -149,8 +149,19 @@ catch (error: CodelyError) {
 console.log(error.message());
 }
 ```
-
-
+Ejemplo (polimorfismo con repositorios):
+Si `UserFinder` depende de `UserRepository`, da igual que le pasemos un `MySqlUserRepository` o un `PostgresUserRepository`.  
+Ambos respetan el mismo contrato, así que el caso de uso no necesita cambiar.
+```
+try {
+const repository = new MySqlUserRepository();
+const finder = new UserFinder(repository);
+return finder.find(userId);
+} 
+catch (error: CodelyError) {
+console.log(error.message());
+}
+```
 ## Qué es un objeto
 _xxx_
 
@@ -160,6 +171,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMDg3NTE3NCwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbMTg1NzU0OTUzNCwtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
