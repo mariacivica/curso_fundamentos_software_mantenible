@@ -1,4 +1,4 @@
-# curso_fundamentos_software_mantenible
+# Guía de Fundamentos de Software Mantenible
 - 01 Clean Code
 - 02 Programación Orientada a Objetos
 - 03 Reglas del diseño simple
