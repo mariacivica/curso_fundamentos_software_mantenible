@@ -162,6 +162,20 @@ catch (error: CodelyError) {
 console.log(error.message());
 }
 ```
+Si mañana se cambia a Postgres, `UserFinder` no cambia:
+```
+try {
+const repository = new PostgresUserRepository();
+const finder = new UserFinder(repository);
+return finder.find(userId);
+}
+catch (error: CodelyError) {
+console.log(error.message());
+}
+```
+Relación con SOLID:
+Esto se apoya en inversión de dependencias: la clase de aplicación depende de una abstracción (`UserRepository`) y no de una implementación concreta.
+
 ## Qué es un objeto
 _xxx_
 
@@ -171,6 +185,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NzU0OTUzNCwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbLTg0MDE5MzMwMSwtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
