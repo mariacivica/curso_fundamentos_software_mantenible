@@ -196,21 +196,29 @@ Por ejemplo, en una clase `User`:
 
 La idea es que, si una operación pertenece al usuario, lo natural es que viva dentro de `User` y no en otra clase o función externa.
 
- - <![endif]-->
-
-<![if !supportLists]>- <![endif]>dispersar la lógica,
-
-<![if !supportLists]>- <![endif]>depender de getters de otras clases,
-
-<![if !supportLists]>- <![endif]>y tener que llamar a métodos lejanos para operar con esos datos.
-
 Eso evita:
+ - dispersar la lógica,
+ - depender de getters de otras clases,
+ - y tener que llamar a métodos lejanos para operar con esos datos.
+
+Comparación con un objeto plano: una función también puede devolver un objeto, pero no siempre estaremos trabajando en el mismo sentido que en POO.
+
+Ejemplo:
+Una función como _newUser()_ puede devolver un objeto con datos, pero ese objeto no pertenece a una clase ni encapsula comportamiento de la misma forma.
+
+En cambio, una clase como `User` sí permite agrupar:
+
+ - datos
+ - validación
+ - formato
+ - y demás lógica relacionada
+
 ### Acoplamiento
 _xxx_
 
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzNzQyMTM1MywtMTgxMzg2MDE0MSwtMT
-c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
+eyJoaXN0b3J5IjpbLTIxMjk2NjAwMzYsLTE4MTM4NjAxNDEsLT
+E3ODE0ODk5NSwtODU3NzA4OTA5XX0=
 -->
