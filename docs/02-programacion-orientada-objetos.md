@@ -217,12 +217,38 @@ Por eso, en POO se suele preferir el uso de clases frente a objetos planos, ya q
 Un objeto no es solo una estructura de datos: es la unión de datos + comportamiento.  
 Por eso, en POO interesa que la lógica viva lo más cerca posible del estado sobre el que opera.
 
+`User`:
+```
+class User {
+
+constructor(
+readonly username,
+readonly email,
+readonly pass
+) {
+
+if (!this.isValid(username, pass)) {
+throw new Error("Invalid user");
+}}
+
+public usernameFormatted() {
+return this.username.toUpperCase();
+}
+
+private isValid(username, pass) {
+return username.length > 3 || pass.length > 8;
+}}
+```
+`newUser`:
+```
+
+```
 ### Acoplamiento
 _xxx_
 
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzODczNzY0LC0xODEzODYwMTQxLC0xNz
-gxNDg5OTUsLTg1NzcwODkwOV19
+eyJoaXN0b3J5IjpbMTU4MjQ4NjA1NywtMTgxMzg2MDE0MSwtMT
+c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
