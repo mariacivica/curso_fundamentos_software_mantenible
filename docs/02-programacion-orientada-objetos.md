@@ -102,8 +102,11 @@ VALUES (${user.username}, ${user.email}, ${user.password})
 #### Herencia
 Consiste en crear clases específicas a partir de una clase más general, reutilizando comportamiento común y especializando lo necesario.
 
-Ejemplo:
 
+Ejemplo:
+- `CodelyError`: define una estructura común para los errores y obliga a que cada error concreto implemente _message()._
+- `UserNotExistsError`: concreta el error para el caso en que un usuario no existe.
+- 
 
 #### Polimorfismo
 _xxx_
@@ -117,6 +120,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTgxOTA0MywtMTgxMzg2MDE0MSwtMT
-c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
+eyJoaXN0b3J5IjpbLTkyMTU5MDM2LC0xODEzODYwMTQxLC0xNz
+gxNDg5OTUsLTg1NzcwODkwOV19
 -->
