@@ -5,7 +5,6 @@ Conceptos estándar:
  - Encapsulación
  - Herencia
  - Polimorfismo
----
 
 #### Abstracción
 **_xxx_**
@@ -26,7 +25,8 @@ _xxx_
 _xxx_
 
 
-
+---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODE0ODk5NSwtODU3NzA4OTA5XX0=
+eyJoaXN0b3J5IjpbLTE4NjMxNDI5MDEsLTE3ODE0ODk5NSwtOD
+U3NzA4OTA5XX0=
 -->
