@@ -44,11 +44,15 @@ Consiste en mover la lógica y las reglas al objeto o clase que mejor representa
 
 Encapsulamos cada responsabilidad en su sitio de forma que las funciones del ejemplo anterior _registerUser()_ desaparecen:
 
-- _UserRegister_: coordina el caso de uso de registro de usuario  Capa de Aplicación
+- _UserRegister_: coordina el caso de uso de registro de usuario  
+Capa de Aplicación
 (No debe contener detalles técnicos de infraestructura ni mucha lógica de dominio; solo debe orquestar)
-- _User_: encapsula aún más la validación  Capa de Dominio
-
+- _User_: encapsula aún más la validación 
+Capa de Dominio
 (Representa la entidad de negocio y encapsula las reglas propias: validar que el usuario sea correcto)
+- `UserRepository_`: encapsula la persistencia  
+Capa de Infraestructura
+(Normalmente su interfaz se declara en aplicación o dominio y su implementación en infraestructura)
 
 #### Herencia
 _xxx_
@@ -65,6 +69,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEzNjE3NzYzMCwtMTgxMzg2MDE0MSwtMT
-c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
+eyJoaXN0b3J5IjpbMzM2NTkxNzIxLC0xODEzODYwMTQxLC0xNz
+gxNDg5OTUsLTg1NzcwODkwOV19
 -->
