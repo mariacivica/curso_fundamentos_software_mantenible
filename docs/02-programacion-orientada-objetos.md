@@ -187,13 +187,30 @@ En este paradigma se busca que los datos y la lógica que trabaja sobre esos dat
 Por eso se entiende que un objeto debe agrupar:
  - estado: sus datos o propiedades
  - comportamiento: los métodos que operan sobre ese estado
+ 
+En POO se busca **alta cohesión**, es decir, que el comportamiento esté lo más cerca posible de los datos a los que hace referencia.
 
+Por ejemplo, en una clase `User`:
+ - los datos pueden ser _username_, _email_ y _password_
+- y el comportamiento puede ser _usernameFormatted()_ o _isValid()_
+
+La idea es que, si una operación pertenece al usuario, lo natural es que viva dentro de `User` y no en otra clase o función externa.
+
+ - <![endif]-->
+
+<![if !supportLists]>- <![endif]>dispersar la lógica,
+
+<![if !supportLists]>- <![endif]>depender de getters de otras clases,
+
+<![if !supportLists]>- <![endif]>y tener que llamar a métodos lejanos para operar con esos datos.
+
+Eso evita:
 ### Acoplamiento
 _xxx_
 
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjgyMDYwMSwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbMTkzNzQyMTM1MywtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
