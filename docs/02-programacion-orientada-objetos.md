@@ -69,44 +69,40 @@ this.repository.save(user);
 ```
 `User`:
 ```
-<![endif]-->
-
 class User {
 
 constructor(
-
 public username: string,
-
 public email: string,
-
 public password: string,
-
 ) {
 
 if (!this.isValid(username, email, password)) {
-
 throw new Error("Invalid user");
-
-}
-
-}
+}}
 
 private isValid(username: string, email: string, password: string): boolean {
-
 return username.length > 3
-
 && email.includes("@")
-
 && password.length > 8;
-
 }}
 ```
 `UserRepository`:
 ```
+class UserRepository {
 
+save(user: User): void {
+sql`
+INSERT INTO users (username, email, password)
+VALUES (${user.username}, ${user.email}, ${user.password})
+`;
+}}
 ```
 #### Herencia
-_xxx_
+Consiste en crear clases específicas a partir de una clase más general, reutilizando comportamiento común y especializando lo necesario.
+
+Ejemplo:
+
 
 #### Polimorfismo
 _xxx_
@@ -120,6 +116,6 @@ _xxx_
 
 ---
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNzIyMDY0MSwtMTgxMzg2MDE0MSwtMT
+eyJoaXN0b3J5IjpbMTExMzg0MDEyNSwtMTgxMzg2MDE0MSwtMT
 c4MTQ4OTk1LC04NTc3MDg5MDldfQ==
 -->
